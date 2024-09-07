@@ -1,0 +1,48 @@
+:root {
+  /* Main company colors */
+  --color-primary-light: #ffdbdb;
+  --color-neutral-light: #f7f7f7;
+  --color-accent: #f15654;
+
+  /* Additional colors */
+  --color-dark: #2c2a2b;
+  --color-neutral-medium: #b1b1b1;
+
+  /* You can also define these colors with their RGB values for flexibility */
+  --color-primary-light-rgb: 255, 219, 219;
+  --color-neutral-light-rgb: 247, 247, 247;
+  --color-accent-rgb: 241, 86, 84;
+  --color-dark-rgb: 44, 42, 43;
+  --color-neutral-medium-rgb: 177, 177, 177;
+}
+
+/* Example usage */
+body {
+  background-color: var(--color-neutral-light);
+  color: var(--color-dark);
+
+  margin: 0;
+  padding: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+.accent-element {
+  color: var(--color-accent);
+}
+
+/* Using RGB values for opacity */
+.overlay {
+  background-color: rgba(var(--color-dark-rgb), 0.7);
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
