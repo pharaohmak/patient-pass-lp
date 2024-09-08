@@ -9,10 +9,13 @@ function MainPage() {
       
         <header className="MainPage-header">
           <img src={logo} className="MainPage-logo" alt="logo" />
-          <p>
+          <div className="MainPage-subheader">
             <code>Welcome to the future of insurance verification.</code>
-          </p>
+         </div>
+          <div className="MainPage-buttons">
+          <Link to="/demo" className="MainPage-DemoSignUp-Button">Get Demo</Link>
           <Link to="/login" className="MainPage-SignIn-Button">Sign In</Link>
+        </div>
         </header>
       </div>
   );

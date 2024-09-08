@@ -1,35 +1,11 @@
 .MainPage {
   background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(240, 200, 160, 0.5) 100%);
   background-size: 400% 400%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: gradientAnimation 15s ease infinite; /* Animation for gradient */
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.MainPage-container {
-  background-color: rgba(255, 255, 255, 0.85); /* Optional: for content box transparency */
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.MainPage-logo {
-  height: 700px;
-  width: auto;
+  animation: gradientAnimation 15s ease infinite;
 }
 
 .MainPage-header {
@@ -37,11 +13,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
-.MainPage-SignIn-Button {
+.MainPage-subheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
+
+.MainPage-logo {
+  height: auto;
+  max-height: 400px;
+  width: auto;
+  margin-bottom: -40px;
+}
+
+.MainPage-buttons {
+  display: flex;
+  flex-direction: row; /* Changed from column to row */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin-top: 45px;
+}
+
+.MainPage-SignIn-Button,
+.MainPage-DemoSignUp-Button {
   background-color: transparent;
   color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
@@ -49,15 +54,23 @@
   text-decoration: none;
   border-radius: 10px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 60px 0;
+  margin: 50px 0;
 }
 
-.MainPage-SignIn-Button:hover {
+.MainPage-SignIn-Button:hover,
+.MainPage-DemoSignUp-Button:hover {
   background-color: white;
   color: #DD615A;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .MainPage-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
 }
 
 /*
@@ -119,7 +132,66 @@
   }
 }
 
-.LoginPage-header h1 {
+.DemoSignUpPage-header h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 25x;
+}
+
+input {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.464);
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 80%;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.DemoSignUpPage {
+  background-color: #DD615A;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: opacity 0.5s ease; /* Smooth fade effect */
+}
+
+.fadeIn {
+  opacity: 0;
+}
+
+.DemoSignUpPage-container {
+  background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(255, 255, 255, 0.369) 100%);
+  background-size: 400% 400%;
+  min-width: 300px;
+  width: 30%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  text-align: center;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.DemoSignUpPage-header h1 {
   color: rgb(255, 255, 255);
   margin: 10px 25px;
 }
