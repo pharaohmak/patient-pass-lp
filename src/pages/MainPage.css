@@ -94,22 +94,41 @@
 }
 
 .LoginPage-container {
-  background-color: rgba(255, 255, 255, 0.85); /* Same container styling */
+  background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(255, 255, 255, 0.369) 100%);
+  background-size: 400% 400%;
+  min-width: 300px;
+  width: 30%;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
   text-align: center;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .LoginPage-header h1 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 25x;
 }
 
 input {
   display: block;
+  background-color: rgba(255, 255, 255, 0.464);
   margin: 10px auto;
   padding: 10px;
+  font-size: 18px;
   border-radius: 8px;
   border: 1px solid #ddd;
   width: 80%;

@@ -10,7 +10,7 @@ function LoginPage() {
         <header className="LoginPage-header">
           <h1>Login</h1>
           <form>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
             <button type="submit" className="MainPage-SignIn-Button">Sign In</button>
           </form>
