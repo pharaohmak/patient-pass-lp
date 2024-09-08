@@ -1,0 +1,120 @@
+.MainPage {
+  background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(240, 200, 160, 0.5) 100%);
+  background-size: 400% 400%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradientAnimation 15s ease infinite; /* Animation for gradient */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.MainPage-container {
+  background-color: rgba(255, 255, 255, 0.85); /* Optional: for content box transparency */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.MainPage-logo {
+  height: 700px;
+  width: auto;
+}
+
+.MainPage-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.MainPage-SignIn-Button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 50px 0;
+}
+
+.MainPage-SignIn-Button:hover {
+  background-color: white;
+  color: #DD615A;
+}
+
+/*
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+*/
+
+/*
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+.LoginPage {
+  background-color: #DD615A;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: opacity 0.5s ease; /* Smooth fade effect */
+}
+
+.fadeIn {
+  opacity: 0;
+}
+
+.LoginPage-container {
+  background-color: rgba(255, 255, 255, 0.85); /* Same container styling */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.LoginPage-header h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 80%;
+}
+
+button {
+  margin-top: 20px;
+}
