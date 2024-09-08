@@ -1,0 +1,64 @@
+.dashboard {
+    padding: 20px;
+  }
+  
+  .patient-table {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 100px;
+    gap: 8px 0; /* Remove horizontal gap, keep vertical gap */
+    grid-template-columns: repeat(5, minmax(0, 17%)) 20%;
+  }
+  
+  .patient-header {
+    display: contents;
+  }
+  
+  .patient-header span {
+    background-color: #ff4d4d; /* A distinct color for the header */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .patient-header span:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .patient-header span:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .patient-row {
+    display: contents;
+  }
+  
+  .patient-row span {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .patient-row .action-area {
+    background-color: #f9f9f9;
+  }
+  
+  .patient-row:hover span {
+    background-color: #f5f5f5;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }

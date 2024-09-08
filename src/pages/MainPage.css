@@ -52,7 +52,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 50px 0;
+  margin: 60px 0;
 }
 
 .MainPage-SignIn-Button:hover {
@@ -95,13 +95,14 @@
 
 .LoginPage-container {
   background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(255, 255, 255, 0.369) 100%);
-  background-size: 400% 400%;
-  min-width: 300px;
+  background-size: 350% 350%;
+  min-width: 250px;
   width: 30%;
-  padding: 30px;
-  border-radius: 12px;
+  min-height: 22%;
+  padding: 25px;
+  border-radius: 20px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   text-align: center;
   animation: gradientAnimation 15s ease infinite;
 }
@@ -120,7 +121,7 @@
 
 .LoginPage-header h1 {
   color: rgb(255, 255, 255);
-  margin-bottom: 25x;
+  margin: 10px 25px;
 }
 
 input {
@@ -132,8 +133,10 @@ input {
   border-radius: 8px;
   border: 1px solid #ddd;
   width: 80%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 50px;
 }

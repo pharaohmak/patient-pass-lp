@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './MainPage.css'; // Referencing the existing CSS file
 
 function LoginPage() {
@@ -12,7 +13,10 @@ function LoginPage() {
           <form>
             <input type="text" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
-            <button type="submit" className="MainPage-SignIn-Button">Sign In</button>
+            <p> <br>
+            </br></p>
+            <Link to="/dashboard" className="MainPage-SignIn-Button">Sign In</Link>
+            <p> </p>
           </form>
         </header>
       </div>
