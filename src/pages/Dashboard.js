@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PatientCard from '../components/PatientCard';
+import PatientDetails from '../components/PatientDetails';
 import './Dashboard.css';
-// import axios from 'axios'; // Uncomment when connecting to Xano
 
 const Dashboard = () => {
   const [patients, setPatients] = useState([
@@ -10,20 +10,16 @@ const Dashboard = () => {
     { status: 'Not Started', name: 'Travis Scott', associatedClinic: 'admin1', insuranceCompany: 'Travis Insure', createdAt: '08-09-2024' },
     { status: 'Not Started', name: 'Kamala Harris', associatedClinic: 'admin1', insuranceCompany: 'Kamala Insure', createdAt: '08-09-2024' },
   ]);
+  const [selectedPatient, setSelectedPatient] = useState(null);
 
-  // Uncomment and modify this when you're ready to connect to Xano
-  // useEffect(() => {
-  //   const fetchPatients = async () => {
-  //     try {
-  //       const response = await axios.get('Your_Xano_API_Endpoint/patients');
-  //       setPatients(response.data);
-  //     } catch (error) {
-  //       console.error('Error fetching patients:', error);
-  //     }
-  //   };
-  //
-  //   fetchPatients();
-  // }, []);
+  const handlePatientSelect = (patient) => {
+    setSelectedPatient(patient);
+  };
+
+  const handlePatientSave = (editedPatient) => {
+    setPatients(patients.map(p => p.name === editedPatient.name ? editedPatient : p));
+    setSelectedPatient(null);
+  };
 
   return (
     <div className="dashboard">
@@ -38,9 +34,16 @@ const Dashboard = () => {
           <span>Actions</span>
         </div>
         {patients.map((patient, index) => (
-          <PatientCard key={index} patient={patient} />
+          <PatientCard key={index} patient={patient} onSelect={handlePatientSelect} />
         ))}
       </div>
+      {selectedPatient && (
+        <PatientDetails
+          patient={selectedPatient}
+          onClose={() => setSelectedPatient(null)}
+          onSave={handlePatientSave}
+        />
+      )}
     </div>
   );
 };

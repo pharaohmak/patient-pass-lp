@@ -1,5 +1,6 @@
 .dashboard {
     padding: 20px;
+    background-color: #c6c6c6;
   }
   
   .patient-table {
@@ -28,12 +29,12 @@
   
   .patient-header span:first-child {
     border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 1px;
   }
   
   .patient-header span:last-child {
     border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 1px;
   }
   
   .patient-row {
@@ -62,3 +63,76 @@
     text-align: center;
     margin-bottom: 20px;
   }
+  
+  
+  .patient-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  .patient-details-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 75%;
+    max-width: 1200px;
+    height: 90%;
+    max-height: 1200px;
+    overflow-y: auto;
+  }
+  
+  
+  
+  .details-grid.uneditable {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: grid;
+    justify-items: start;
+    grid-template-columns: [first] 58px [second] 100px [third] 48px [fourth] 70px [fifth] 80px [sixth] 100px [end];
+    grid-template-rows: [row1-start] 0px [row1-end] 20px;
+
+}
+  
+  .details-grid.uneditable span {
+    font-weight: bold;
+  }
+  
+  .details-grid.editable input {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .button-group {
+    width: 14%;
+    margin-top: 5%;
+    background-color: #ffffff;
+    gap: 0px;
+    margin-left: 86%;
+  }
+  
+  button {
+    margin: 6px;
+    padding: 5px;
+    font-size: 21px;
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c0c0c0;
+  }
+
+  
