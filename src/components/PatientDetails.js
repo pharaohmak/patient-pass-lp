@@ -24,7 +24,7 @@ const PatientDetails = ({ patient, onClose, onSave }) => {
           <label>Insurance:</label>
           <span>{patient.insuranceCompany}</span>
         </div>
-        <div className="details-grid editable">
+        <div className="details-grid editable1">
           <label>Group Name:</label>
           <input
             type="text"
