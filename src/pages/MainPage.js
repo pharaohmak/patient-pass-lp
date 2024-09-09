@@ -13,7 +13,7 @@ function MainPage() {
             <code>The future of insurance verification.</code>
          </div>
           <div className="MainPage-buttons">
-          <Link to="/demo" className="MainPage-DemoSignUp-Button">Get Demo</Link>
+          <Link to="/demo" className="MainPage-SignUp-Button">Sign Up</Link>
           <Link to="/login" className="MainPage-SignIn-Button">Sign In</Link>
         </div>
         </header>

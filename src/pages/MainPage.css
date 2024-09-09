@@ -34,7 +34,7 @@
   height: auto;
   max-height: 400px;
   width: auto;
-  margin-bottom: -40px;
+  margin-bottom: -25px;
 }
 
 .MainPage-buttons {
@@ -42,11 +42,12 @@
   flex-direction: row; /* Changed from column to row */
   justify-content: center; /* Center the buttons horizontally */
   gap: 20px; /* Space between buttons */
-  margin-top: 45px;
+  margin-top: 30px;
+  margin-right: 3%;
 }
 
 .MainPage-SignIn-Button,
-.MainPage-DemoSignUp-Button {
+.MainPage-SignUp-Button {
   background-color: transparent;
   color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
@@ -58,10 +59,11 @@
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 50px 0;
+  align-items: center;
 }
 
 .MainPage-SignIn-Button:hover,
-.MainPage-DemoSignUp-Button:hover {
+.MainPage-SignUp-Button:hover {
   background-color: white;
   color: #DD615A;
 }
@@ -132,7 +134,7 @@
   }
 }
 
-.DemoSignUpPage-header h1 {
+.SignUp-header h1 {
   color: rgb(255, 255, 255);
   margin-bottom: 25x;
 }
@@ -151,8 +153,7 @@ input {
 button {
   margin-top: 20px;
 }
-
-.DemoSignUpPage {
+.SignUp {
   background-color: #DD615A;
   height: 100vh;
   display: flex;
@@ -165,8 +166,7 @@ button {
 .fadeIn {
   opacity: 0;
 }
-
-.DemoSignUpPage-container {
+.SignUp-container {
   background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(255, 255, 255, 0.369) 100%);
   background-size: 400% 400%;
   min-width: 300px;
@@ -179,6 +179,82 @@ button {
   animation: gradientAnimation 15s ease infinite;
 }
 
+.SignUp-header h1 {
+  color: rgb(255, 255, 255);
+  margin: 20px 0;
+  margin-bottom: 5%;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  margin: 20px 0;
+  margin-bottom: 5%;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/* Updated input styles to include select and textarea */
+input, select, textarea {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.601);
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: sans-serif; /* Changed to match the header font */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 80%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+/* Updated styles for select dropdown */
+.select-wrapper {
+  width: 80%;
+  margin: 10px auto;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000000' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+/* New styles for textarea */
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Existing button styles */
+button {
+  margin-top: 50px;
+  font-family: sans-serif; /* Match the font with other elements */
+  font-size: 17px;
+  font-weight: 400;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #DD615A;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #DD615A;
+  color: #ffffff;
+}
+
+/* Existing animation keyframes */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -189,26 +265,4 @@ button {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.DemoSignUpPage-header h1 {
-  color: rgb(255, 255, 255);
-  margin: 10px 25px;
-}
-
-input {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.464);
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  width: 80%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-
-button {
-  margin-top: 50px;
 }
