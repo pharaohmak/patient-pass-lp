@@ -15,7 +15,7 @@ function LoginPage() {
             <input type="password" placeholder="Password" required />
             <p> <br>
             </br></p>
-            <Link to="/dashboard" className="MainPage-SignIn-Button">Sign In</Link>
+            <button to="/dashboard" className="MainPage-SignIn-Button">Sign In</button>
             <p> </p>
           </form>
         </header>

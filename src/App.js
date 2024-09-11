@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
+import ConfirmationMessage from './pages/ConfirmationMessage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/demo" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/confirmation" element={<ConfirmationMessage />} />
       </Routes>
     </div>
   );
