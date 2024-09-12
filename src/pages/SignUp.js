@@ -95,10 +95,10 @@ function ContactUs() {
               onChange={handleChange}
               required
             >
-              <option value="" disabled>Select your current insurance verification process</option>
+              <option value="" disabled>How do you handle insurance verifications?</option>
               <option value="call">We call insurance companies for patient information</option>
               <option value="company">We have a company who handles verifications for us</option>
-              <option value="mixed">We complete most/some verifications, and some are done by a company</option>
+              <option value="mixed">We complete most/some verifications and some are done by a company</option>
               <option value="other">Other (Please describe below your insurance verifying process)</option>
             </select>
           </div>
@@ -109,13 +109,15 @@ function ContactUs() {
             placeholder="Please leave a description or let us know how we can help."
             rows="3"
           ></textarea>
-          <button type="submit" className="MainPage-SignUp-Button" disabled={isSubmitting}>
+          <button type="submit" className="LoginPage-SignIn-Button" disabled={isSubmitting}>
             {isSubmitting ? 'Submitting...' : 'Sign Up for Demo'}
           </button>
         </form>
       </div>
     </div>
   );
+  
 }
 
 export default ContactUs;
+

@@ -1,14 +1,32 @@
-.MainPage {
-  background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(240, 200, 160, 0.5) 100%);
-  background-size: 400% 400%;
+/* Common styles */
+.MainPage,
+.LoginPage,
+.SignUp {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s ease;
+  background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }
 
-.MainPage-header {
+.MainPage-container,
+.LoginPage-container,
+.SignUp-container {
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  background-color: white;  /* Solid white background */
+}
+
+/* MainPage specific styles */
+.MainPage {
+  background-image: radial-gradient(circle at center, #DD615A 0%, rgba(240, 110, 110, 0.8) 50%, rgba(240, 200, 160, 0.5) 100%);
+}
+
+.MainPage-header,
+.MainPage-subheader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,20 +36,13 @@
 }
 
 .MainPage-subheader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgb(255, 255, 255);
+  color: #ffffff;  /* Changed to match theme color */
   font-weight: bold;
   font-size: 20px;
   font-style: italic;
-  padding: 10px;
-  text-align: center;
 }
 
 .MainPage-logo {
-  height: auto;
   max-height: 400px;
   width: auto;
   margin-bottom: -25px;
@@ -39,18 +50,65 @@
 
 .MainPage-buttons {
   display: flex;
-  flex-direction: row; /* Changed from column to row */
-  justify-content: center; /* Center the buttons horizontally */
-  gap: 20px; /* Space between buttons */
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
   margin-top: 30px;
   margin-right: 3%;
 }
 
-.MainPage-SignIn-Button,
-.MainPage-SignUp-Button {
+/* LoginPage and SignUp specific styles */
+.LoginPage,
+.SignUp {
+  background-image: radial-gradient(circle at center, #fc9f9f 0%, rgba(255, 164, 164, 0.8) 50%, rgba(255, 255, 255, 0.369) 100%);
+}
+
+.LoginPage-container,
+.SignUp-container {
+  min-width: 400px;
+  width: 40%;
+  padding: 30px;
+}
+
+.LoginPage-container {
+  min-height: 30%;
+  border: 3px solid #DD615A;  /* Solid border color */
+}
+
+.SignUp-container {
+  min-width: 470px;
+  width: 30%;
+  border: 2px solid #DD615A;  /* Solid border color */
+}
+
+.LoginPage-header h1,
+.SignUp-header h1 {
+  color: #DD615A;  /* Changed to match theme color */
+  margin: 20px 0 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Button styles */
+.MainPage-SignIn-Button {
+    background-color: transparent;
+    color: #ffffff;  /* Changed to match theme color */
+    border: 2px solid #ffffff;  /* Changed to match theme color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 50px 0;
+    align-items: center;
+  }
+
+.LoginPage-SignIn-Button {
   background-color: transparent;
-  color: rgb(255, 255, 255);
-  border: 2px solid rgb(255, 255, 255);
+  color: #DD615A;  /* Changed to match theme color */
+  border: 2px solid #DD615A;  /* Changed to match theme color */
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 10px;
@@ -62,187 +120,92 @@
   align-items: center;
 }
 
+.MainPage-SignUp-Button {
+  background-color: transparent;
+  color: #ffffff;  /* Changed to match theme color */
+  border: 2px solid #ffffff;  /* Changed to match theme color */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 50px 0;
+  align-items: center;
+}
+
+.LoginPage-SignUp-Button {
+  background-color: transparent;
+  color: #DD615A;  /* Changed to match theme color */
+  border: 2px solid #DD615A;  /* Changed to match theme color */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 50px 0;
+  align-items: center;
+}
 .MainPage-SignIn-Button:hover,
 .MainPage-SignUp-Button:hover {
-  background-color: white;
-  color: #DD615A;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-  .MainPage-buttons {
-    flex-direction: column; /* Stack buttons vertically on small screens */
-  }
-}
-
-/*
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-*/
-
-/*
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
-
-.LoginPage {
   background-color: #DD615A;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: opacity 0.5s ease; /* Smooth fade effect */
+  color: white;
 }
-
-.fadeIn {
-  opacity: 0;
-}
-
-.LoginPage-container {
-  background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(255, 255, 255, 0.369) 100%);
-  background-size: 350% 350%;
-  min-width: 250px;
-  width: 30%;
-  min-height: 22%;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border: 2px solid #ddd;
-  text-align: center;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.SignUp-header h1 {
-  color: rgb(255, 255, 255);
-  margin-bottom: 25x;
-}
-
-input {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.464);
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  width: 80%;
-}
-
-button {
-  margin-top: 20px;
-}
-.SignUp {
+.LoginPage-SignIn-Button:hover {
   background-color: #DD615A;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: opacity 0.5s ease; /* Smooth fade effect */
+  color: white;
 }
 
-.fadeIn {
-  opacity: 0;
-}
-.SignUp-container {
-  background: radial-gradient(circle, #DD615A 40%, rgba(240, 110, 110, 0.8) 60%, rgba(255, 255, 255, 0.369) 100%);
-  background-size: 400% 400%;
-  min-width: 300px;
-  width: 30%;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border: 1px solid #ddd;
-  text-align: center;
-  animation: gradientAnimation 15s ease infinite;
+.LoginPage-SignIn-Button {
+  margin: 0 -20px;
 }
 
-.SignUp-header h1 {
-  color: rgb(255, 255, 255);
-  margin: 20px 0;
-  margin-bottom: 5%;
-  font-family: sans-serif;
-  letter-spacing: 2px;
-}
-
-p {
-  color: rgb(255, 255, 255);
-  margin: 20px 0;
-  margin-bottom: 5%;
-  font-weight: 300;
-  font-size: 17px;
-}
-
-/* Updated input styles to include select and textarea */
-input, select, textarea {
+/* Form element styles */
+input,
+select,
+textarea {
   display: block;
-  background-color: rgba(255, 255, 255, 0.601);
-  margin: 10px auto;
+  background-color: #f5f5f5;  /* Light gray background */
+  margin: 10px auto 5%;
   padding: 10px;
   font-size: 17px;
   font-weight: 400;
-  font-family: sans-serif; /* Changed to match the header font */
+  font-family: sans-serif;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #DD615A;  /* Border color to match theme */
   width: 80%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  box-sizing: border-box; /* Ensures padding doesn't affect overall width */
-}
-
-/* Updated styles for select dropdown */
-.select-wrapper {
-  width: 80%;
-  margin: 10px auto;
+  box-sizing: border-box;
 }
 
 select {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000000' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23DD615A' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   padding-right: 30px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-height: 40px;
+  height: auto;
 }
 
-/* New styles for textarea */
 textarea {
   resize: vertical;
   min-height: 60px;
 }
 
-/* Existing button styles */
 button {
   margin-top: 50px;
-  font-family: sans-serif; /* Match the font with other elements */
+  font-family: sans-serif;
   font-size: 17px;
   font-weight: 400;
   padding: 10px 20px;
-  background-color: #ffffff;
-  color: #DD615A;
+  background-color: #DD615A;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -250,19 +213,31 @@ button {
 }
 
 button:hover {
-  background-color: #DD615A;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #DD615A;
 }
 
-/* Existing animation keyframes */
+/* Animations */
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
+  }
+}
+
+/* Utility classes */
+.fadeIn {
+  opacity: 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .MainPage-buttons {
+    flex-direction: column;
   }
 }

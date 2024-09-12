@@ -10,13 +10,11 @@ function LoginPage() {
     <div className="LoginPage">
       <div className="LoginPage-container">
         <header className="LoginPage-header">
-          <h1>Login</h1>
+          <h1>Clinic Login</h1>
           <form>
             <input type="text" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
-            <p> <br>
-            </br></p>
-            <button to="/dashboard" className="MainPage-SignIn-Button">Sign In</button>
+            <button to="/dashboard" className="LoginPage-SignIn-Button">Sign In</button>
             <p> </p>
           </form>
         </header>
