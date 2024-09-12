@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './MainPage.css';
+
+// Initialize EmailJS with your user ID (public key)
+emailjs.init("9TXMY8Fzwhls68TfK");
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -11,6 +14,7 @@ function ContactUs() {
     description: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,6 +28,7 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     try {
       // Store the form data in local storage
@@ -32,24 +37,25 @@ function ContactUs() {
       localStorage.setItem('patientPassSubmissions', JSON.stringify(submissions));
 
       // Send email using EmailJS
-      await emailjs.send(
+      const result = await emailjs.send(
         'demo_emailjs',
         'email_template',
         {
-          to_email: 'dane@thepatientpass.com',
+          to_name: 'PatientPass Team',
           from_name: formData.dentalOffice,
-          from_email: 'demo@thepatientpass.com',
+          from_email: formData.email,
           insurance_process: formData.insuranceProcess,
           message: formData.description
-        },
-        'oSZQAt1R2cfwNZ1eNkLMT'
+        }
       );
+
+      console.log('EmailJS result:', result);
 
       // Redirect to confirmation page
       navigate('/confirmation');
     } catch (error) {
       console.error('Error submitting form:', error);
-      // Handle error (e.g., show error message to user)
+      setError('There was an error submitting the form. Please try again.');
     }
 
     setIsSubmitting(false);
@@ -64,6 +70,7 @@ function ContactUs() {
             Fill out the form below and we'll get back to you as soon as possible.
           </p>
         </header>
+        {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
