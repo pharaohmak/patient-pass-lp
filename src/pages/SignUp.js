@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import './MainPage.css';
 
 function ContactUs() {
@@ -30,8 +31,19 @@ function ContactUs() {
       submissions.push({ ...formData, timestamp: new Date().toISOString() });
       localStorage.setItem('patientPassSubmissions', JSON.stringify(submissions));
 
-      // Simulating an API call (replace this with your actual API call if needed)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send email using EmailJS
+      await emailjs.send(
+        'demo_emailjs',
+        'email_template',
+        {
+          to_email: 'dane@thepatientpass.com',
+          from_name: formData.dentalOffice,
+          from_email: 'demo@thepatientpass.com',
+          insurance_process: formData.insuranceProcess,
+          message: formData.description
+        },
+        'oSZQAt1R2cfwNZ1eNkLMT'
+      );
 
       // Redirect to confirmation page
       navigate('/confirmation');

@@ -7,10 +7,10 @@ function ConfirmationMessage() {
     <div className="SignUp">
       <div className="SignUp-container">
         <header className="SignUp-header">
-          <h1>Thank You!</h1>
-          <p>
-            Thank you for choosing PatientPass. We will be contacting you shortly.
-          </p>
+          <h1>Success!</h1>
+          <h3>
+          Thank you for choosing PatientPass. We value your time and will be contacting you shortly. 
+          </h3>
         </header>
         <Link to="/" className="MainPage-SignUp-Button">
           Return to Home
