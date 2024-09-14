@@ -5,6 +5,13 @@ import './MainPage.css';
 
 // Initialize EmailJS with your user ID (public key)
 emailjs.init("9TXMY8Fzwhls68TfK");
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import './MainPage.css';
+
+// Initialize EmailJS with your user ID (public key)
+emailjs.init("9TXMY8Fzwhls68TfK");
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -30,6 +37,14 @@ function ContactUs() {
     setIsSubmitting(true);
     setError(null);
 
+    // Map insurance process values to full descriptions
+    const insuranceProcessMap = {
+      "call": "We call insurance companies for patient information",
+      "company": "We have a company who handles verifications for us",
+      "mixed": "We complete most/some verifications and some are done by a company",
+      "other": "Other"
+    };
+
     try {
       // Store the form data in local storage
       const submissions = JSON.parse(localStorage.getItem('patientPassSubmissions') || '[]');
@@ -44,7 +59,7 @@ function ContactUs() {
           to_name: 'PatientPass Team',
           from_name: formData.dentalOffice,
           from_email: formData.email,
-          insurance_process: formData.insuranceProcess,
+          insurance_process: insuranceProcessMap[formData.insuranceProcess] || formData.insuranceProcess,
           message: formData.description
         }
       );
@@ -57,7 +72,6 @@ function ContactUs() {
       console.error('Error submitting form:', error);
       setError('There was an error submitting the form. Please try again.');
     }
-
     setIsSubmitting(false);
   };
 
