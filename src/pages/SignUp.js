@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
-import './MainPage.css';
 
 // Initialize EmailJS with your user ID (public key)
 emailjs.init("9TXMY8Fzwhls68TfK");
