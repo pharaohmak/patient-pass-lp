@@ -9,6 +9,7 @@
   transition: opacity 0.5s ease;
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
 }
 
 .MainPage-container,
@@ -25,7 +26,7 @@
 
 /* MainPage specific styles */
 .MainPage {
-  background-image: radial-gradient(circle at center, #DD615A 0%, rgba(240, 110, 110, 0.8) 50%, rgba(240, 200, 160, 0.5) 100%);
+  background-image: radial-gradient(circle at center, #fea0a5 0%, rgba(254, 160, 165, 0.8) 50%, rgba(254, 160, 165, 0.5) 100%);
 }
 
 .MainPage-header,
@@ -63,7 +64,7 @@
 /* LoginPage and SignUp specific styles */
 .LoginPage,
 .SignUp {
-  background-image: radial-gradient(circle at center, #fc9f9f 0%, rgba(255, 164, 164, 0.8) 50%, rgba(255, 255, 255, 0.369) 100%);
+  background-image: radial-gradient(circle at center, #fea0a5 0%, rgba(254, 160, 165, 0.8) 50%, rgba(255, 255, 255, 0.369) 100%);
 }
 
 .LoginPage-container,
@@ -74,18 +75,18 @@
 }
 
 .LoginPage-container {
-  border: 3px solid #DD615A;
+  border: 3px solid #f15654;
 }
 
 .SignUp-container {
-  border: 2px solid #DD615A;
+  border: 2px solid #f15654;
 }
 
 .LoginPage-header h1,
 .SignUp-header h1 {
-  color: #DD615A;
+  color: #f15654;
   margin: 20px 0 5%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
   font-size: 1.5rem;
 }
@@ -95,6 +96,7 @@
 .MainPage-SignUp-Button,
 .LoginPage-SignIn-Button,
 .LoginPage-SignUp-Button {
+  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
@@ -113,15 +115,15 @@
 
 .LoginPage-SignIn-Button,
 .LoginPage-SignUp-Button {
-  color: #DD615A;
-  border-color: #DD615A;
+  color: #f15654;
+  border-color: #f15654;
 }
 
 .MainPage-SignIn-Button:hover,
 .MainPage-SignUp-Button:hover,
 .LoginPage-SignIn-Button:hover,
 .LoginPage-SignUp-Button:hover {
-  background-color: #DD615A;
+  background-color: #fea0a5;
   color: white;
 }
 
@@ -129,22 +131,29 @@
 input,
 select,
 textarea {
+  font-family: 'Poppins', sans-serif;
   display: block;
   background-color: #f5f5f5;
   margin: 10px auto 5%;
   padding: 10px;
   font-size: 1rem;
   font-weight: 400;
-  font-family: sans-serif;
   border-radius: 8px;
-  border: 1px solid #DD615A;
+  border: 1px solid #f15654;
   width: 100%;
   box-sizing: border-box;
 }
 
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+  transition: opacity 0.3s ease-in-out;
+}
+
 select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23DD615A' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23f15654' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   padding-right: 30px;
@@ -162,11 +171,11 @@ textarea {
 
 button {
   margin-top: 20px;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   padding: 10px 20px;
-  background-color: #DD615A;
+  background-color: #f15654;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -178,7 +187,7 @@ button {
 
 button:hover {
   background-color: #ffffff;
-  color: #DD615A;
+  color: #f15654;
 }
 
 /* Animations */
