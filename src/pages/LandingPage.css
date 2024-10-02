@@ -86,23 +86,13 @@ nav ul li a:hover {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 3rem 5% 1rem; /* Increased top padding */
+  padding: 3rem 5% 1rem;
   align-items: center;
   flex-wrap: wrap;
 }
 
 
-.main-title {
-  font-weight: 500;
-  text-align: center;
-  font-size: calc(2vw + 1rem);
-  margin: 2rem 0 3rem;
-  max-width: 90%;
-  white-space: normal; /* Allow wrapping */
-  word-wrap: break-word; /* Ensure long words wrap */
-  overflow-wrap: break-word; /* Modern browsers */
-  hyphens: auto; /* Enable hyphenation */
-}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -118,12 +108,12 @@ nav ul li a:hover {
   align-items: center;
   gap: .5rem;
   width: 90%;
-  margin-bottom: .5rem;
+  margin-bottom: .1rem;
 }
 
 .image-content {
   flex: 1;
-  max-width: 55%; /* Slightly bigger when next to taglines */
+  max-width: 55%;
 }
 
 .dashboard-image {
@@ -137,13 +127,43 @@ nav ul li a:hover {
   margin-bottom: 8%;
 }
 
+
+.main-title {
+  font-weight: 500;
+  text-align: center;
+  font-size: calc(2vw + 1rem);
+  margin: -.5rem 0 4rem;
+  max-width: 90%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  opacity: 0;
+  animation: fadeInSlide 2s ease-out 3s forwards;
+  transform: translateY(20px);
+}
+
 .taglines h2 {
   font-size: calc(3.5vw + 1rem);
   font-weight: 550;
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
   line-height: 1.1;
   white-space: nowrap;
+  opacity: 0;
 }
+
+.tagline-1 {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.tagline-2 {
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.tagline-3 {
+  animation: fadeIn 1s ease-in-out 2s forwards;
+}
+
 
 .cta-buttons {
   display: flex;
@@ -153,7 +173,7 @@ nav ul li a:hover {
 
 .footer {
   text-align: center;
-  padding: 2rem 5%;
+  padding: 1rem 5%;
 }
 
 .brand-logos {
@@ -173,6 +193,7 @@ nav ul li a:hover {
 .brand-logos img:hover {
   opacity: 1;
 }
+
 .btn {
   background-color: transparent;
   color: var(--color-text);
@@ -219,6 +240,28 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 @media (max-width: 768px) {
   .auth-buttons .btn {
     min-width: 80px;
@@ -234,7 +277,7 @@ nav ul li a:hover {
   }
 
   .image-content {
-    max-width: 75%; /* Cap at 75% when it's the only element on the line */
+    max-width: 75%;
   }
 
   .text-content {
@@ -279,16 +322,15 @@ nav ul li a:hover {
   }
 
   .main-title {
-    font-size: calc(3vw + 1rem); /* Slightly larger on smaller screens */
-    margin: 1rem 0 2rem; /* Adjust margins for smaller screens */
+    font-size: calc(3vw + 1rem);
+    margin: 1rem 0 2rem;
   }
-
 
   .taglines h2 {
     font-size: calc(3vw + 1rem);
   }
 
   .image-content {
-    max-width: 75%; /* Maintain 75% cap on smaller screens */
+    max-width: 75%;
   }
 }

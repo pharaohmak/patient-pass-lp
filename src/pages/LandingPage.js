@@ -29,19 +29,26 @@ const LandingPage = () => {
       </header>
       
       <main className="main-content">
+         {/* 
+<nav></nav>
         <h1 className="main-title">The Future of Insurance Verification</h1>
+        */}
+        <br></br>
+        <br></br>
         <div className="content-wrapper">
           <div className="image-and-text-container">
             <div className="image-content">
               <img src={dashboardMockup} alt="Patient Pass Dashboard" className="dashboard-image" />
             </div>
             <div className="text-content">
-              <div className="taglines">
-                <h2>No more calls.</h2>
-                <h2>No more hassle.</h2>
-              </div>
+            <div className="taglines">
+  <h2 className="tagline-1">No more calls.</h2>
+  <h2 className="tagline-2">No more hassle.</h2>
+  <h2 className="tagline-3">No more denials.</h2>
+</div>
             </div>
           </div>
+          <h1 className="main-title">The Future of Insurance Verification</h1>
           <div className="cta-buttons">
             <Link to="/demo" className="btn btn-primary">Request a Demo</Link>
           </div>
