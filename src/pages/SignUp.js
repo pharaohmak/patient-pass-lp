@@ -72,7 +72,7 @@ function ContactUs() {
     <div className="SignUp">
       <div className="SignUp-container">
         <header className="SignUp-header">
-          <h1>Schedule a demo</h1>
+          <h1 style={{fontFamily: 'Poppins, sans-serif'}}>Schedule a demo</h1>
           <p>
             Fill out the form below and we'll get back to you as soon as possible.
           </p>

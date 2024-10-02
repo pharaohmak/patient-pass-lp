@@ -18,7 +18,7 @@ function LoginPage() {
     <div className="LoginPage">
       <div className="LoginPage-container">
         <header className="LoginPage-header">
-          <h1>Clinic Login</h1>
+          <h1>Practice Login</h1>
           <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
