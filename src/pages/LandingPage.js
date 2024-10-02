@@ -39,7 +39,6 @@ const LandingPage = () => {
               <div className="taglines">
                 <h2>No more calls.</h2>
                 <h2>No more hassle.</h2>
-                <h2>No more worries.</h2>
               </div>
             </div>
           </div>
