@@ -76,22 +76,13 @@ nav ul li a:hover {
   transform: translateY(-50%);
 }
 
-.auth-buttons .btn {
-  min-width: 80px;
-  padding: 8px 12px;
-  font-size: 0.9rem;
-}
-
 .main-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   padding: 3rem 5% 1rem;
   align-items: center;
-  flex-wrap: wrap;
 }
-
-
 
 .content-wrapper {
   display: flex;
@@ -125,8 +116,8 @@ nav ul li a:hover {
   flex: 1;
   max-width: 50%;
   margin-bottom: 8%;
+  padding-left: 5%;
 }
-
 
 .main-title {
   font-weight: 500;
@@ -140,7 +131,6 @@ nav ul li a:hover {
   hyphens: auto;
   opacity: 0;
   animation: fadeInSlide 2s ease-out 3s forwards;
-  transform: translateY(20px);
 }
 
 .taglines h2 {
@@ -152,18 +142,9 @@ nav ul li a:hover {
   opacity: 0;
 }
 
-.tagline-1 {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-.tagline-2 {
-  animation: fadeIn 1s ease-in-out 1s forwards;
-}
-
-.tagline-3 {
-  animation: fadeIn 1s ease-in-out 2s forwards;
-}
-
+.tagline-1 { animation: fadeIn 1s ease-in-out forwards; }
+.tagline-2 { animation: fadeIn 1s ease-in-out 1s forwards; }
+.tagline-3 { animation: fadeIn 1s ease-in-out 2s forwards; }
 
 .cta-buttons {
   display: flex;
@@ -207,7 +188,6 @@ nav ul li a:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 10px 0;
   display: inline-block;
-  width: auto;
   min-width: 140px;
   font-family: 'Poppins', sans-serif;
 }
@@ -215,13 +195,6 @@ nav ul li a:hover {
 .btn-primary {
   background-color: var(--color-text);
   color: var(--color-background);
-  border: 2px solid var(--color-text);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--color-text);
-  border: 2px solid var(--color-text);
 }
 
 .btn-primary:hover {
@@ -234,16 +207,25 @@ nav ul li a:hover {
   color: var(--color-background);
 }
 
-.auth-buttons .btn {
-  min-width: 100px;
-  padding: 10px 20px;
-  font-size: 1rem;
+.strikethrough {
+  position: relative;
+  display: inline-block;
 }
 
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  10%, 90% { opacity: 1; }
+.strikethrough::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  background-color: currentColor;
+  transform: scaleX(0);
 }
+
+.tagline-1 .strikethrough::after { animation: strikethrough 0.5s ease-out 1s forwards; }
+.tagline-2 .strikethrough::after { animation: strikethrough 0.5s ease-out 2s forwards; }
+.tagline-3 .strikethrough::after { animation: strikethrough 0.5s ease-out 3s forwards; }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -261,13 +243,9 @@ nav ul li a:hover {
   }
 }
 
-
-@media (max-width: 768px) {
-  .auth-buttons .btn {
-    min-width: 80px;
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
+@keyframes strikethrough {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
 }
 
 @media (max-width: 1024px) {
@@ -276,12 +254,8 @@ nav ul li a:hover {
     text-align: center;
   }
 
-  .image-content {
+  .image-content, .text-content {
     max-width: 75%;
-  }
-
-  .text-content {
-    max-width: 100%;
   }
 
   .cta-buttons {
@@ -309,10 +283,7 @@ nav ul li a:hover {
   }
 
   .auth-buttons {
-    position: absolute;
     right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .auth-buttons .btn {
@@ -329,40 +300,4 @@ nav ul li a:hover {
   .taglines h2 {
     font-size: calc(3vw + 1rem);
   }
-
-  .image-content {
-    max-width: 75%;
-  }
 }
-
-
-.tagline {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.strikethrough {
-  position: relative;
-  display: inline-block;
-}
-
-.strikethrough::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 3px;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-}
-
-.tagline:hover .strikethrough::after {
-  transform: scaleX(1);
-}
-
-/* Optional: Stagger the animation for each tagline */
-.tagline-1 .strikethrough::after { transition-delay: 0.1s; }
-.tagline-2 .strikethrough::after { transition-delay: 0.2s; }
-.tagline-3 .strikethrough::after { transition-delay: 0.3s; }
