@@ -27,8 +27,9 @@ const LandingPage = () => {
               <img src={dashboardMockup} alt="Patient Pass Dashboard" className="dashboard-image" />
             </div>
             <div className="text-content">
+              <h2 className="say-goodbye">Say goodbye to</h2>
               <div className="taglines">
-                <h2 className="tagline tagline-1"><span className="strikethrough">Calls</span></h2>
+                <h2 className="tagline tagline-1"><span className="strikethrough">Insurance Calls</span></h2>
                 <h2 className="tagline tagline-2"><span className="strikethrough">Headaches</span></h2>
                 <h2 className="tagline tagline-3"><span className="strikethrough">Denials</span></h2>
               </div>
