@@ -13,26 +13,12 @@ const LandingPage = () => {
         <div className="logo-container">
           <img src={logoImage} alt="Patient Pass Logo" className="logo" />
         </div>
-        {/* 
-<nav>
-  <ul>
-    <li><a href="#product">Product</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#resources">Resources</a></li>
-  </ul>
-</nav>
-*/}
         <div className="auth-buttons">
-        <Link to="/login" className="btn btn-primary">Sign In</Link>
+          <Link to="/login" className="btn btn-primary">Sign In</Link>
         </div>
       </header>
       
       <main className="main-content">
-         {/* 
-<nav></nav>
-        <h1 className="main-title">The Future of Insurance Verification</h1>
-        */}
         <br></br>
         <br></br>
         <div className="content-wrapper">
@@ -41,11 +27,11 @@ const LandingPage = () => {
               <img src={dashboardMockup} alt="Patient Pass Dashboard" className="dashboard-image" />
             </div>
             <div className="text-content">
-            <div className="taglines">
-  <h2 className="tagline-1">No more calls.</h2>
-  <h2 className="tagline-2">No more hassle.</h2>
-  <h2 className="tagline-3">No more denials.</h2>
-</div>
+              <div className="taglines">
+                <h2 className="tagline tagline-1"><span className="strikethrough">Calls</span></h2>
+                <h2 className="tagline tagline-2"><span className="strikethrough">Headaches</span></h2>
+                <h2 className="tagline tagline-3"><span className="strikethrough">Denials</span></h2>
+              </div>
             </div>
           </div>
           <h1 className="main-title">The Future of Insurance Verification</h1>

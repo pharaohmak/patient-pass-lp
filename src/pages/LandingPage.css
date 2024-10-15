@@ -334,3 +334,35 @@ nav ul li a:hover {
     max-width: 75%;
   }
 }
+
+
+.tagline {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.strikethrough {
+  position: relative;
+  display: inline-block;
+}
+
+.strikethrough::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 3px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.tagline:hover .strikethrough::after {
+  transform: scaleX(1);
+}
+
+/* Optional: Stagger the animation for each tagline */
+.tagline-1 .strikethrough::after { transition-delay: 0.1s; }
+.tagline-2 .strikethrough::after { transition-delay: 0.2s; }
+.tagline-3 .strikethrough::after { transition-delay: 0.3s; }
