@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './MainPage.css';
+import logoImage from '../assets/PatientPass_Logomark_Wht.png';
 
 // Initialize EmailJS with your user ID (public key)
 emailjs.init("9TXMY8Fzwhls68TfK");
 
-function ContactUs() {
+function SignUp() {
   const [formData, setFormData] = useState({
     dentalOffice: '',
     email: '',
@@ -69,16 +70,11 @@ function ContactUs() {
   };
 
   return (
-    <div className="SignUp">
-      <div className="SignUp-container">
-        <header className="SignUp-header">
-          <h1 style={{fontFamily: 'Poppins, sans-serif'}}>Schedule a demo</h1>
-          <p>
-            Fill out the form below and we'll get back to you as soon as possible.
-          </p>
-        </header>
-        {error && <div className="error-message">{error}</div>}
+    <div className="signup-page">
+      <div className="signup-container">
+        <img src={logoImage} alt="Patient Pass Logo" className="logo" />
         <form onSubmit={handleSubmit}>
+          <h1>Schedule a demo</h1>
           <input
             type="text"
             name="dentalOffice"
@@ -95,20 +91,18 @@ function ContactUs() {
             placeholder="Email"
             required
           />
-          <div className="select-wrapper">
-            <select
-              name="insuranceProcess"
-              value={formData.insuranceProcess}
-              onChange={handleChange}
-              required
-            >
-              <option value="" disabled>How do you handle insurance verifications?</option>
-              <option value="call">We call insurance companies for patient information</option>
-              <option value="company">We have a company who handles verifications for us</option>
-              <option value="mixed">We complete most/some verifications and some are done by a company</option>
-              <option value="other">Other (Please describe below your insurance verifying process)</option>
-            </select>
-          </div>
+          <select
+            name="insuranceProcess"
+            value={formData.insuranceProcess}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>How do you handle insurance verifications?</option>
+            <option value="call">We call insurance companies for patient information</option>
+            <option value="company">We have a company who handles verifications for us</option>
+            <option value="mixed">We complete most/some verifications and some are done by a company</option>
+            <option value="other">Other (Please describe below your insurance verifying process)</option>
+          </select>
           <textarea
             name="description"
             value={formData.description}
@@ -116,13 +110,15 @@ function ContactUs() {
             placeholder="Please leave a description or let us know how we can help."
             rows="3"
           ></textarea>
-          <button type="submit" className="LoginPage-SignIn-Button" disabled={isSubmitting}>
-            {isSubmitting ? 'Submitting...' : 'Sign Up for Demo'}
+          <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Request Demo'}
           </button>
+          {error && <div className="error-message">{error}</div>}
         </form>
       </div>
+      <Link to="/" className="back-to-home">Back to Home</Link>
     </div>
   );
 }
 
-export default ContactUs;
+export default SignUp;

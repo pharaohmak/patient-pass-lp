@@ -13,6 +13,9 @@ const LandingPage = () => {
         <div className="logo-container">
           <img src={logoImage} alt="Patient Pass Logo" className="logo" />
         </div>
+        <nav className="nav-links">
+          {/* Add navigation links here if needed */}
+        </nav>
         <div className="auth-buttons">
           <Link to="/login" className="btn btn-primary">Sign In</Link>
         </div>

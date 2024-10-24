@@ -55,10 +55,17 @@
 }
 
 .SignUp-container {
-  border: 3px solid #ffffff;
+  width: 100%;
+  max-width: 550px;
+  padding: 40px 30px;
+  color: #ffffff;
   font-family: 'Poppins', sans-serif;
-  padding-left: 30px;
-  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  border-radius: 15px;
 }
 
 .LoginPage-header,
@@ -211,4 +218,181 @@ select:hover {
   .SignUp-header h1 {
     font-size: 1.8rem;
   }
+}
+
+/* SignUp specific styles */
+.SignUp {
+  background-color: #fea0a5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.SignUp-container .logo {
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.SignUp-header p {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.SignUp input,
+.SignUp select,
+.SignUp textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.SignUp input::placeholder,
+.SignUp textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.SignUp select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+.SignUp select option {
+  background-color: #fea0a5;
+  color: #ffffff;
+}
+
+.SignUp .LoginPage-SignIn-Button {
+  background-color: #ffffff;
+  color: #fea0a5;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.SignUp .LoginPage-SignIn-Button:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.SignUp .back-to-home {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.SignUp .back-to-home:hover {
+  text-decoration: underline;
+}
+
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fea0a5;
+  padding: 2rem;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.signup-container .logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.signup-container p {
+  margin-bottom: 1.5rem;
+}
+
+.signup-container input,
+.signup-container select,
+.signup-container textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup-container input::placeholder,
+.signup-container textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-container select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+.signup-container .btn {
+  background-color: #ffffff;
+  color: #fea0a5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  min-width: 140px;
+}
+
+.signup-container .btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.back-to-home {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.back-to-home:hover {
+  text-decoration: underline;
 }
