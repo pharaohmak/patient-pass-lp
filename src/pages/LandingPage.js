@@ -3,7 +3,7 @@ import './LandingPage.css';
 import './MakramLanding.css'
 import dashboardMockup from '../assets/laptop.png';
 import logoImage from '../assets/PatientPass_Primary_Wht.png';
-import serviceImage from '../assets/serviceImage.png'
+import serviceImage from '../assets/PatientPass_Logomark_Wht.png' // Replace with actual image path
 import nexhealth from '../assets/nexhealthLogo.svg';
 import vyne from '../assets/vyneLogo.png';
 import { Link } from 'react-router-dom';
